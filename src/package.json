@@ -1,0 +1,23 @@
+{
+  "main": "load.html",
+  "name": "Snoop Slayer",
+  "version": "1.2.4",
+  "keywords": [
+    "demo",
+    "node-webkit"
+  ],
+  "window": {
+    "title": "Snoop Slayer",
+    "icon": "img/spr_player.png",
+    "toolbar": false,
+    //"frame": false,
+    "resizable": false,
+    "width": 1280,
+    "height": 720,
+    "position": "center"
+  },
+  "devDependencies": {
+    "node-webkit-builder": "^1.0.13",
+    "nw-builder": "^3.2.0"
+  }
+}
