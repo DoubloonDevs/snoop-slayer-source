@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <script src="LoadMedia.js"></script>
+    <meta charset="utf-8">
+    <title>Snoop Slayer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="pace/pace.js"></script>
+    <link href="pace/themes/pace-theme-barber-shop.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header" id="header">
+      <img src="window/img/close.png" onclick="require('nw.gui').Window.get().close();" id="close">
+      <img src="window/img/minimize.png" onclick="require('nw.gui').Window.get().minimize();" id="minimize">
+      <p1 id="title">Snoop Slayer</p1>
+    </div>
+    <div id="pause_menu" style="margin-left: 0px; top: calc((50% - 417px) + 15px);" align="center">
+      <ul style="list-style-type:none;padding-left: 0px;margin-left: 16px;margin-right: 16px;">
+        <h1>Game Paused</h1>
+        <li>
+          <input type="button" id="toggle_all" class="toggle_all" onclick="mute++" value="Mute FX: OFF" style="z-index: 1;">
+        </li>
+        <li>
+          <input type="button" id="toggle_music" class="toggle_music" onclick="mute_music++" value="Mute music: OFF" style="z-index: 1;">
+        </li>
+        <li>
+          <input type="button" id="toggle_fullscreen" class="toggle_music" onclick="win.toggleFullscreen()" value="Fullscreen: OFF" style="z-index: 1;">
+        </li>
+        <li>
+          <h2>Resolution</h2>
+          <select id="resolution_select" style="z-index: 1;">
+            <option value="720">1280x720</option>
+            <option value="768">1366x768</option>
+            <option value="900">1600x900</option>
+            <option value="1080">1920x1080</option>
+            <option value="1440">2560x1440</option>
+          </select>
+        </li>
+        <li>
+          <h2>Console</h2>
+          <textarea type="text" id="console" onclick="document.getElementById('console').placeholder=''" placeholder=""></textarea>
+        </li>
+        <li>
+          <input type="button" id="restart" class="restart" onclick="execute_code(document.getElementById('console').value);" style="z-index: -1;" value="Run">
+        </li>
+        <br>
+        <li>
+          <input type="button" id="apply" class="apply" onclick="resize();" value="Apply" style="z-index: 1;">
+        </li>
+      </ul>
+    </div>
+    <div id="hud-container">
+      <div id="hud"></div>
+    </div>
+    <canvas id="myCanvas" width="1920" height="1080" style="width: 1920px; height: 1080px; cursor: default;"></canvas>
+    <script src="ClientInput.js"></script>
+    <script src="init.js"></script>
+    <script src="Game.js"></script>
+    <script src="undefinedmods.js"></script>
+  </body>
+</html>
