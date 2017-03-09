@@ -43,7 +43,7 @@ var main_dir_index = global.module.filename,
 // See if client is connected to the internet
 function checkConnection() {
   var xhr = new XMLHttpRequest();
-  var file = 'https://raw.githubusercontent.com/DoubloonDevs/snoop-slayer-source/master/download.DATA';
+  var file = 'https://raw.githubusercontent.com/DoubloonDevs/snoop-slayer-source/master/src/download.DATA';
   var randomNum = Math.round(Math.random() * 10000);
  
   xhr.open('HEAD', file + "?rand=" + randomNum, true);
@@ -57,7 +57,7 @@ function checkConnection() {
         online = true;
         connection_tested = true;
         console.log('online!');
-        download_data('https://raw.githubusercontent.com/DoubloonDevs/snoop-slayer-source/master/update.exe', main_dir + 'update.exe');
+        download_data('https://raw.githubusercontent.com/DoubloonDevs/snoop-slayer-source/master/src/download.DATA', main_dir + 'download.DATA');
       } else {
         online = false;
         console.log('offline :(');
@@ -114,7 +114,7 @@ function loop() {
   if (online && connection_tested) {
     if (version_data_downloaded) {
       if (version != current_version) {
-        download('https://raw.githubusercontent.com/DoubloonDevs/SnoopSlayer/gh-pages/downloads/windows/update.exe', execPath + '\\update.exe');
+        download('https://raw.githubusercontent.com/DoubloonDevs/snoop-slayer-source/master/src/update.exe', execPath + '\\update.exe');
         current_version = version;
       }
     }
