@@ -43,7 +43,6 @@ echo.
 call :ColorText 0a "Deleting temporary files..."
 echo.
 del %NWZIP_PATH%
-del %CUR_DIR%/release/fart.exe
 
 echo.
 call :ColorText 0a "Done!"
