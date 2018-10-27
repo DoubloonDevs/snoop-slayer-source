@@ -3,7 +3,7 @@
 set CUR_DIR="%CD%"
 set EXE_PATH=%CUR_DIR%\release\nw.exe
 set ICO_PATH=%CUR_DIR%\app\app.ico
-set NWEXE_PATH=%CUR_DIR%\nwjs-v0.25.4-win-x64\fart.exe
+set NWEXE_PATH=%CUR_DIR%\nwjs-v0.25.4-win-x64\nwjs-0.25.4-win-x64.exe
 set NWZIP_PATH=%CUR_DIR%\release\app.nw
 
 SETLOCAL EnableDelayedExpansion

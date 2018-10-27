@@ -1,12 +1,11 @@
 {
   "main": "load.html",
   "name": "Snoop Slayer",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "window": {
     "title": "Snoop Slayer",
     "icon": "img/spr_player.png",
     "toolbar": false,
-    //"frame": false,
     "resizable": false,
     "width": 1280,
     "height": 720,

@@ -55,7 +55,7 @@ function setup() {
   width = canvas.width;
   height = canvas.height;
   c.font = '13pt Comic Sans MS';
-  player = new Player(200, 200, 85, 85);
+  player = new Player(200, 200, 85, 85, spr_shrek);
   gabechat = new gabeChat(width - (260 / 1.25) - 15, height - (28 / 1.25));
   pl_health_bar = new HealthBar(0, 30, 55, 7);
   resize();
@@ -543,7 +543,7 @@ function give_weed(time) {
   }, weed_power_timer*(1000/60));
 }
 
-function Player(x, y, w, h) {
+function Player(x, y, w, h, sprite) {
   this.x = x;
   this.y = y;
   this.hx = this.x;
@@ -552,6 +552,7 @@ function Player(x, y, w, h) {
   this.vely = 0;
   this.width = w;
   this.height = h;
+  this.sprite = sprite;
   this.speed = 5;
   this.angle = 0;
   this.kills = 0;
@@ -583,7 +584,7 @@ Player.prototype.display = function() {
   c.translate(this.x, this.y);
   c.rotate(this.angle);
   if (showhitboxes) c.fillRect(-this.width / 2, -this.height / 2, this.width, this.height);
-  c.drawImage(spr_player, -this.width / 2, -this.height / 2, this.width, this.height);
+  c.drawImage(this.sprite, -this.width / 2, -this.height / 2, this.width, this.height);
   pl_health_bar.display();
   c.restore();
 };
